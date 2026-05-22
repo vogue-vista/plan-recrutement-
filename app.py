@@ -159,7 +159,8 @@ else:
                         temperature=0.7
                     )
                     
-                  doc_genere = reponse.choices[0].message.content
+                    # Le fameux [0] est maintenant bien en place ici !
+                    doc_genere = reponse.choices[0].message.content
                     st.success("✨ Votre document RH est prêt !")
                     st.markdown(doc_genere)
                     st.text_area("Copier le texte brut :", value=doc_genere, height=300)
